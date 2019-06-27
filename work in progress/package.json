@@ -1,0 +1,23 @@
+{
+  "name": "cloudwizoz",
+  "version": "1.0.0",
+  "description": "Visualization and enablement tool for anything cloud. We make magic happen in cloud.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkuruba/cloudwizoz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rkuruba/cloudwizoz/issues"
+  },
+  "homepage": "https://github.com/rkuruba/cloudwizoz#readme",
+  "dependencies": {
+    "aws-sdk": "^2.483.0"
+  }
+}

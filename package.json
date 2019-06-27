@@ -1,23 +1,19 @@
 {
-  "name": "cloudwizoz",
+  "name": "burger",
   "version": "1.0.0",
-  "description": "Visualization and enablement tool for anything cloud. We make magic happen in cloud.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rkuruba/cloudwizoz.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rkuruba/cloudwizoz/issues"
-  },
-  "homepage": "https://github.com/rkuruba/cloudwizoz#readme",
   "dependencies": {
-    "aws-sdk": "^2.483.0"
-  }
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "method-override": "^3.0.0",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "description": ""
 }

@@ -2,6 +2,9 @@
 const connection = require('../config/connection.js');
 
 // extra function to help with the way I am doing the SQL query
+
+
+
 const sqlObj = (ob) => {
   let arr = [];
 
@@ -39,6 +42,19 @@ const orm = {
     });
   },
 */
+
+
+getDiagrams: function(table, id, cb) {
+  const queryString = 'SELECT * FROM ?? where App_ID = ?'
+  // insert into events(campus,title,date,start_time,end_time,type,future) values ('Alpharetta','Icecream Social','2019-05-20','10:00','12:00','Social','1');
+  connection.query(queryString, [table, id], function(err, result) {
+    if (err) {
+      cb(err);
+    }
+    cb(null, result);
+  });
+},
+
   create: function(table, cols, vals, cb) {
     const queryString = 'INSERT INTO ?? (??) VALUES (?)'
     // insert into events(campus,title,date,start_time,end_time,type,future) values ('Alpharetta','Icecream Social','2019-05-20','10:00','12:00','Social','1');

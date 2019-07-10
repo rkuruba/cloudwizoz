@@ -7,9 +7,9 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
-    user: 'p27w9o0j5oworgwf',
-    password: 'gnxr0bw37fze6b4u',
-    database: 'events_db'
+    user: 'root2',
+    password: 'root2',
+    database: 'cloudwizoz_db'
   });
 }
 

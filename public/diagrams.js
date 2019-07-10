@@ -1,3 +1,10 @@
+  
+  (async function() {
+  const response = await axios.get("/diagramData");
+  const nodeDataArray = response.data;
+ 
+
+  
   var $ = go.GraphObject.make;  // for conciseness in defining templates
 
     myDiagram =
@@ -114,14 +121,91 @@
 
 
     // set up the nodeDataArray, describing each person/position
-    var nodeDataArray = [
-      { key: 77, type: "project", projectName: "WizOZ" },
-      { key: 79, parent: 77, type: "AWS Cloud", AvailabilityZone: "us-east-1c"},
-      { key: 80, parent: 77, type: "VPC", VpcId: "vpc-1a2b3c4d"},
-      { key: 81, parent: 79, type: "subnet", SubnetId: "subnet-4fcab660"},
-      { key: 82, parent: 79, type: "ec2", InstanceID: "i-02830dbe3b396baf5", InstanceType:"t2.micro", Platform:"windows", Architecture:"x86_64", LaunchTime:"2019-06-25T23:18:47.000Z"},
-      { key: 81, parent: 79, type: "BlockDeviceMappings", DeviceName: "/dev/sda1", VolumeId: "vol-0066996b1c7ede09d"}
+
+
+
+    var nodeDataArray7 = [
+      // { key: 77, type: "project", projectName: "WizOZ" },
+      // { key: 79, parent: 77, type: "AWS Cloud", AvailabilityZone: "us-east-1c"},
+      // { key: 80, parent: 77, type: "VPC", VpcId: "vpc-1a2b3c4d"},
+      // { key: 81, parent: 79, type: "subnet", SubnetId: "subnet-4fcab660"},
+      // { key: 82, parent: 79, type: "ec2", InstanceID: "i-02830dbe3b396baf5", InstanceType:"t2.micro", Platform:"windows", Architecture:"x86_64", LaunchTime:"2019-06-25T23:18:47.000Z"},
+      // { key: 81, parent: 79, type: "BlockDeviceMappings", DeviceName: "/dev/sda1", VolumeId: "vol-0066996b1c7ede09d"}
  
+
+
+      { key: 2928508567503280600,
+        parent: 2928508567503280600,
+        type: 'VPC_ID',
+        Vpc_Id: 'vpc-2e9d7d55' },
+      { key: 8785525702509842000,
+        parent: 2928508567503280600,
+        type: 'AZ',
+        AvailabilityZone: 'us-east-1a' },
+      { key: 11714034270013123000,
+        parent: 8785525702509842000,
+        type: 'EC2',
+        InstanceID: 'i-06068f860157afc8e',
+        InstanceType: 't2.micro',
+        Platform: 'windows' },
+      { key: 20499559972522963000,
+        parent: 8785525702509842000,
+        type: 'BlockDeviceMappings',
+        VolumeId: 'vol-0066996b1c7ede09d' },
+      { key: 3823060091417203000,
+        parent: 3823060091417203000,
+        type: 'VPC_ID',
+        Vpc_Id: 'vpc-2e9d7d55' },
+      { key: 11469180274251610000,
+        parent: 3823060091417203000,
+        type: 'AZ',
+        AvailabilityZone: 'us-east-1b' },
+      { key: 15292240365668813000,
+        parent: 11469180274251610000,
+        type: 'EC2',
+        InstanceID: 'i-06068f860157afc8f',
+        InstanceType: 'db.t3.micro',
+        Platform: 'RDS' },
+      { key: 26761420639920423000,
+        parent: 11469180274251610000,
+        type: 'BlockDeviceMappings',
+        VolumeId: 'vol-0066996b1c7ede09f' },
+      { key: 6585245660570768000,
+        parent: 6585245660570768000,
+        type: 'VPC_ID',
+        Vpc_Id: 'vpc-2e9d7d55' },
+      { key: 19755736981712306000,
+        parent: 6585245660570768000,
+        type: 'AZ',
+        AvailabilityZone: 'us-east-1a' },
+      { key: 26340982642283074000,
+        parent: 19755736981712306000,
+        type: 'EC2',
+        InstanceID: 'i-06068f860157afc8g',
+        InstanceType: 'i3.large',
+        Platform: 'windows' },
+      { key: 46096719623995376000,
+        parent: 19755736981712306000,
+        type: 'BlockDeviceMappings',
+        VolumeId: 'vol-0066996b1c7ede09c' },
+      { key: 8286133334100417000,
+        parent: 8286133334100417000,
+        type: 'VPC_ID',
+        Vpc_Id: 'vpc-2e9d7d55' },
+      { key: 24858400002301247000,
+        parent: 8286133334100417000,
+        type: 'AZ',
+        AvailabilityZone: 'us-east-1b' },
+      { key: 33144533336401666000,
+        parent: 24858400002301247000,
+        type: 'EC2',
+        InstanceID: 'i-06068f860157afc8h',
+        InstanceType: 'u-6tb1.metal',
+        Platform: 'windows' },
+      { key: 58002933338702910000,
+        parent: 24858400002301247000,
+        type: 'BlockDeviceMappings',
+        VolumeId: 'vol-0066996b1c7ede09l' } 
      ];
 
     // function theInfoTextConverter(info) {
@@ -169,7 +253,6 @@
       $(go.Overview, "myOverviewDiv",  // the HTML DIV element for the Overview
         { observed: myDiagram, contentAlignment: go.Spot.Center });   // tell it which Diagram to show and pan
   
-
   // the Search functionality highlights all of the nodes that have at least one data property match a RegExp
   function searchDiagram() {  // called by button
     var input = document.getElementById("mySearch");
@@ -195,3 +278,5 @@
 
     myDiagram.commitTransaction("highlight search");
   }
+
+})();

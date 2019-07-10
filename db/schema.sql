@@ -26,6 +26,13 @@ PRIMARY KEY ( `ID` ) );
   `Business` VARCHAR( 255) NOT NULL,
   `Criticality` VARCHAR( 255) NOT NULL,
   PRIMARY KEY ( `ID` ) );
+  
+    CREATE TABLE `Billing` (
+  `ID` Int( 11 ) AUTO_INCREMENT NOT NULL,
+  `App_ID` VARCHAR(50),
+  `Date` DATETIME,
+  `Amount` VARCHAR( 255),
+  PRIMARY KEY ( `ID` ) );
 
 delete from objects;
 delete from application;

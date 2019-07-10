@@ -30,7 +30,7 @@ PRIMARY KEY ( `ID` ) );
     CREATE TABLE `Billing` (
   `ID` Int( 11 ) AUTO_INCREMENT NOT NULL,
   `App_ID` VARCHAR(50),
-  `Date` DATETIME,
+  `Date` VARCHAR(50),
   `Amount` VARCHAR( 255),
   PRIMARY KEY ( `ID` ) );
 

@@ -32,7 +32,7 @@
     }
   </style>
   <!-- Custom styles for this template -->
-  <link href="./css/starter-template.css" rel="stylesheet">
+  <link href="./assets/css/starter-template.css" rel="stylesheet">
 </head>
 
 <body>
@@ -50,21 +50,8 @@
         <li class="nav-item active">
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="diagram.html">Diagram Example</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
+ 
+  
       </ul>
 
     </div>
@@ -84,17 +71,24 @@
         <h3 class="text-left">Understand Your Cloud</h3>
         <p class="lead text-left">We generate diagrams of your cloud infrastructure for visibility and cost tracking.
           Enter your credentials below to sign in or to create a new account.</p>
+
+          
+
       </div>
     </div>
 
 
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-6">
+          &nbsp;
+         &nbsp;
+         &nbsp;
+         &nbsp;
         <form>
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <label for="inputUsername" class="col-sm-2 col-form-label">Input Username</label>
             <div class="col-sm-7">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              <input class="form-control" id="inputUsername" placeholder="Input Username">
             </div>
           </div>
           <div class="form-group row">
@@ -107,17 +101,23 @@
 
           <div class="form-group row">
             <div class="col-sm-7">
-              <button type="submit" class="btn btn-primary">Existing User Sign in</button>
+              <a class="btn btn-primary" href="diagram.html" role="button">Existing User Sign In</a>
+              <!-- <button  type="submit" id="submitButton" class="btn btn-primary" >Existing User Sign in</button> -->
             </div>
           </div>
         </form>
       </div>
-      <div class="col-md-5">
-        2 of 2
+
+      <div class="col-6">
+          <img src="./assets/img/Cloudwizoz.svg" class="img-fluid rounded" alt="Responsive image">
       </div>
+
+
+      
+      
     </div>
 
-
+  
 
 
 
@@ -130,7 +130,7 @@
 
   </main><!-- /.container -->
 
-
+  
   <script src="https://unpkg.com/gojs@2.0/release/go-debug.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
  
@@ -147,7 +147,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   
-  <script src="diagrams.js"></script>
+  <script src="login.js"></script>
+
   
   <!-- <script src="bundle.js"></script> -->
 </body>

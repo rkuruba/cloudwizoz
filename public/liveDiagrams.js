@@ -1,6 +1,7 @@
-  
+
   (async function() {
-  const response = await axios.get("/diagramData");
+  const response = await axios.get("/liveDiagramData");
+  console.log(response)
   const nodeDataArray = response.data;
  
 
@@ -47,9 +48,8 @@
       var str = "";
       if (info.type) str += "Type:" + info.type;
       if (info.AvailabilityZone) str += "\n AvailabilityZone: " + info.AvailabilityZone;
-      if (info.Vpc_Id) str += "\n VpcId: " + info.Vpc_Id;
-      //Vpc_Id: res[i].VPC_ID},
-      if (info.SubnetId) str += "\n Subnet: " + info.SubnetId;
+      if (info.VpcId) str += "\n VpcId: " + info.VpcId;
+      if (info.SubnetId) str += "\n VpcId: " + info.SubnetId;
       if (info.InstanceID) str += "\n InstanceID: " + info.InstanceID;
       if (info.InstanceType) str += "\n InstanceType: " + info.InstanceType;
       if (info.Platform) str += "\n Platform: " + info.Platform;

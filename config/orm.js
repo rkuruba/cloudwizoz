@@ -55,6 +55,17 @@ getDiagrams: function(table, id, cb) {
   });
 },
 
+getLiveDiagrams: function(table, id, cb) {
+  const queryString = 'SELECT * FROM ?? where App_ID = ?'
+  // insert into events(campus,title,date,start_time,end_time,type,future) values ('Alpharetta','Icecream Social','2019-05-20','10:00','12:00','Social','1');
+  connection.query(queryString, [table, id], function(err, result) {
+    if (err) {
+      cb(err);
+    }
+    cb(null, result);
+  });
+},
+
   create: function(table, cols, vals, cb) {
     const queryString = 'INSERT INTO ?? (??) VALUES (?)'
     // insert into events(campus,title,date,start_time,end_time,type,future) values ('Alpharetta','Icecream Social','2019-05-20','10:00','12:00','Social','1');
@@ -67,10 +78,10 @@ getDiagrams: function(table, id, cb) {
     });
   },
 
-  delete: function(table, cols, cb) {
-    const queryString = 'Delete from ?? where id ??'
+  delete: function(table, cb) {
+    const queryString = 'Delete from ??'
     // insert into events(campus,title,date,start_time,end_time,type,future) values ('Alpharetta','Icecream Social','2019-05-20','10:00','12:00','Social','1');
-    connection.query(queryString, [table, cols, vals], function(err, result) {
+    connection.query(queryString, [table], function(err, result) {
       if (err) {
         throw err;
       }
